@@ -1,0 +1,16 @@
+{
+  "name": "claude-haiku-lambda",
+  "version": "1.0.0",
+  "description": "Lambda handler for Claude Haiku integration",
+  "main": "claude-haiku-handler.js",
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.400.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
