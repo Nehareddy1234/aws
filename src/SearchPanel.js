@@ -84,9 +84,6 @@ function SearchPanel({ onSearch }) {
             </Button>
           )}
         </Flex>
-        <Text fontSize="tiny" color="gray.500" marginTop="0.5rem">
-          🤖 Powered by Claude Haiku 4.5 AI
-        </Text>
       </form>
       <div className="quick-searches">
         <Text className="quick-searches-title">Quick Searches:</Text>

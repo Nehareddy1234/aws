@@ -1,6 +1,6 @@
 // src/App.js - UPDATED
 import React, { useState } from 'react';
-import { withAuthenticator, Button, Heading, Text, Badge } from '@aws-amplify/ui-react';
+import { withAuthenticator, Button, Heading, Text } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import './styles.css';
 
@@ -25,9 +25,6 @@ function App({ signOut, user }) {
           </div>
           
           <div className="user-section">
-            <Badge backgroundColor="#10b981">
-              🤖 Claude Haiku 4.5 Enabled
-            </Badge>
             <Text className="welcome-text" style={{ color: '#e0e7ff' }}>
               Welcome, {user.username}!
             </Text>
