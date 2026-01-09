@@ -61,15 +61,6 @@ aws-photo-gallery/
         └── deploy.yml         # GitHub Actions CI/CD workflow
 ```
 
-## 🤖 Claude Haiku 4.5 Integration
-
-The app integrates Claude Haiku 4.5 for intelligent photo search:
-
-**Frontend Flow:**
-1. User enters search query in SearchPanel
-2. Query sent to Lambda via API Gateway
-3. Lambda calls Claude Haiku 4.5 API
-4. Response used to enhance photo search results
 
 **Security:**
 - Anthropic API key stored in AWS Secrets Manager
