@@ -1,20 +1,20 @@
 /**
- * claudeClient.js - Frontend utility to call the Claude Haiku Lambda backend
- * 
+ * photoAnalysisClient.js - Frontend utility to call the photo analysis backend
+ *
  * Usage:
  *   import { analyzePhoto, generateTags, describePhoto } from './claudeClient';
- *   
+ *
  *   const analysis = await analyzePhoto("A sunset over mountains");
  *   const tags = await generateTags("A cat sleeping on a couch");
  *   const description = await describePhoto("A beach scene");
  */
 
-const CLAUDE_LAMBDA_ENDPOINT = process.env.REACT_APP_CLAUDE_API_URL || 
+const ANALYSIS_ENDPOINT = process.env.REACT_APP_CLAUDE_API_URL ||
   'https://YOUR_API_GATEWAY_ENDPOINT_HERE/prod/claude';
 
-export async function callClaude(message, action = 'analyze-photo') {
+export async function callAnalysisAPI(message, action = 'analyze-photo') {
   try {
-    const response = await fetch(CLAUDE_LAMBDA_ENDPOINT, {
+    const response = await fetch(ANALYSIS_ENDPOINT, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -33,19 +33,19 @@ export async function callClaude(message, action = 'analyze-photo') {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error('Claude API error:', error);
+    console.error('Photo analysis API error:', error);
     throw error;
   }
 }
 
 export async function analyzePhoto(photoDescription) {
-  return callClaude(photoDescription, 'analyze-photo');
+  return callAnalysisAPI(photoDescription, 'analyze-photo');
 }
 
 export async function generateTags(photoDescription) {
-  return callClaude(photoDescription, 'generate-tags');
+  return callAnalysisAPI(photoDescription, 'generate-tags');
 }
 
 export async function describePhoto(photoDescription) {
-  return callClaude(photoDescription, 'describe-photo');
+  return callAnalysisAPI(photoDescription, 'describe-photo');
 }

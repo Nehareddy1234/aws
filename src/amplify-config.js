@@ -18,10 +18,6 @@ const awsExports = {
             PhotoAPI: {
                 endpoint: 'https://e8wis9pu09.execute-api.ap-south-1.amazonaws.com/prod',
                 region: 'ap-south-1'
-            },
-            ClaudeAPI: {
-                endpoint: process.env.REACT_APP_CLAUDE_API_URL || 'https://YOUR_CLAUDE_API_ENDPOINT/prod/claude',
-                region: 'ap-south-1'
             }
         }
     },

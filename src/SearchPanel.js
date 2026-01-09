@@ -30,7 +30,6 @@ function SearchPanel({ onSearch }) {
     if (searchPrompt.trim()) {
       setLoading(true);
       try {
-        // Use Claude Haiku 4.5 to analyze search intent
         const result = await analyzePhoto(searchPrompt.trim());
         const enhancedSearch = result.message || searchPrompt.trim();
         onSearch(enhancedSearch);
@@ -38,8 +37,7 @@ function SearchPanel({ onSearch }) {
           setSearchHistory(prev => [searchPrompt.trim(), ...prev.slice(0, 4)]);
         }
       } catch (error) {
-        console.error('Claude search failed, falling back to regular search:', error);
-        // Fall back to regular search if Claude fails
+        console.error('Search analysis failed, falling back to regular search:', error);
         onSearch(searchPrompt.trim());
         if (!searchHistory.includes(searchPrompt.trim())) {
           setSearchHistory(prev => [searchPrompt.trim(), ...prev.slice(0, 4)]);
