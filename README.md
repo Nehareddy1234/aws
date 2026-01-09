@@ -4,7 +4,7 @@ A smart photo gallery application with AI-powered search using Claude Haiku 4.5,
 
 ## 🎯 Features
 
-- ✅ **AI-Powered Photo Search** - Search photos using natural language powered by Claude Haiku 4.5
+- ✅ **AI-Powered Photo Search** - Search photos using natural language 
 - ✅ **Secure Authentication** - Cognito-based user authentication
 - ✅ **Photo Upload** - Store photos in private S3 buckets
 - ✅ **Serverless Backend** - Lambda + API Gateway integration
