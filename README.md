@@ -1,5 +1,3 @@
-# AWS Photo Gallery with Claude Haiku 4.5
-
 A smart photo gallery application with AI-powered search using Claude Haiku 4.5, hosted on AWS with React, AWS Amplify, and serverless backend.
 
 ## 🎯 Features
